@@ -346,11 +346,12 @@ iframe{
 
 .work-button{
   width: max-content;
-  color: #df9d63;
-  font-size: var(--small-font-size);
+  color: var(--text-color-dark);
+  font-size: var(--normal-font-size);
   display: flex;
   column-gap: .25rem;
   align-items: center;
+  margin-top: 10px;
 }
 
 .work-button:hover .work-icon{
@@ -371,7 +372,7 @@ iframe{
 
 
 /*=============== CONTACT ===============*/
-.contact-container{
+/* .contact-container{
   row-gap: 3rem;
   padding-bottom: 6rem;
 }
@@ -457,7 +458,7 @@ iframe{
 }
 .contact-form-area textarea{
   resize: none;
-}
+} */
 /*=============== FOOTER ===============*/
 
 
