@@ -109,7 +109,7 @@ let data_project = [
     }, {
         nama: "E-Vote Pemilihan Ketua Mahasiswa",
         img: "assets/img/project4.png",
-        bahasa: ["PHP", "Laravel 7", "Jquery" , "Solo - Project"]
+        bahasa: ["PHP", "Laravel 7", "Jquery"]
     }
 ]
 
@@ -142,7 +142,6 @@ const load_project = () => {
                     <span class="bahasa-item">Laravel 8</span>
                     <span class="bahasa-item">Jquery</span>
                     <span class="bahasa-item">API</span>
-                    <span class="bahasa-item">Solo - Project</span></div>
                     <a href="assets/img/project5.png" target="_blank" class="work-button">
                         Demo <i data-feather="arrow-right" class="work-icon"></i>
                     </a>
