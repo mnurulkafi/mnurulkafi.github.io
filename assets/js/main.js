@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.bi-moon-fill').hide();
     particle_dark();
-    load_skill();
+    // load_skill();
     load_project();
     let body = "dark";
     var r = document.documentElement;
@@ -30,64 +30,64 @@ $(document).ready(function () {
     });
 })
 
-let data_skill =[
-    {
-        nama : "HTML5",
-        desk: "<b>2 Years</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    },
-    {
-        nama: "CSS",
-        desk: "<b>2 Years</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-    },
-    {
-        nama: "JavaScript",
-        desk: "<b>6 Months</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    },
-    {
-        nama: "Jquery",
-        desk: "<b>6 Months</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg"
-    },
-    {
-        nama: "React JS",
-        desk: "1 Months of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-    },
-    {
-        nama: "PHP",
-        desk: "<b>1 Years</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-    },
-    {
-        nama: "Laravel",
-        desk: "<b>1 Years</b> of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
-    },
-    {
-        nama: "Github",
-        desk: "6 months of experience.",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-    }
-];
+// let data_skill =[
+//     {
+//         nama : "HTML5",
+//         desk: "<b>2 Years</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+//     },
+//     {
+//         nama: "CSS",
+//         desk: "<b>2 Years</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+//     },
+//     {
+//         nama: "JavaScript",
+//         desk: "<b>6 Months</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+//     },
+//     {
+//         nama: "Jquery",
+//         desk: "<b>6 Months</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg"
+//     },
+//     {
+//         nama: "React JS",
+//         desk: "1 Months of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+//     },
+//     {
+//         nama: "PHP",
+//         desk: "<b>1 Years</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+//     },
+//     {
+//         nama: "Laravel",
+//         desk: "<b>1 Years</b> of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+//     },
+//     {
+//         nama: "Github",
+//         desk: "6 months of experience.",
+//         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+//     }
+// ];
 
-const load_skill = () =>{
-    let tag = "";
-    for (const key in data_skill) {
-        tag += `<div class="col-sm-3 mt-4">
-                        <div class="card card-custom">
-                            <img src="${data_skill[key].img}" class="card-img">
-                            <div class="card-body">
-                                <h5 class="card-title">${data_skill[key].nama}</h5>
-                                <p class="card-text">${data_skill[key].desk}</p>
-                            </div>
-                        </div>
-                    </div>`
-    }
-    document.getElementById("row-skills").innerHTML = tag;
-}
+// const load_skill = () =>{
+//     let tag = "";
+//     for (const key in data_skill) {
+//         tag += `<div class="col-sm-3 mt-4">
+//                         <div class="card card-custom">
+//                             <img src="${data_skill[key].img}" class="card-img">
+//                             <div class="card-body">
+//                                 <h5 class="card-title">${data_skill[key].nama}</h5>
+//                                 <p class="card-text">${data_skill[key].desk}</p>
+//                             </div>
+//                         </div>
+//                     </div>`
+//     }
+//     document.getElementById("row-skills").innerHTML = tag;
+// }
 
 let data_project = [
     {
