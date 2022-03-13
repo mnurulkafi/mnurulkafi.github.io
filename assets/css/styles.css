@@ -1,0 +1,577 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+        Purple: hsl(250, 66%, 75%)
+        Blue: hsl(207, 90%, 72%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+  */
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: #e1eef5;
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: #2f3e49;
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #2f3e49; 
+  background-image: url(""); 
+  background-size: cover; 
+  background-position: 50% 50%;
+} 
+#particles-js-white{
+  position:fixed; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #f2f2f2; 
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/*=============== BASE ===============*/
+* {
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s;  
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4.5rem 0 1rem;
+}
+
+.section-title, 
+.section-subtitle {
+  text-align: center;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: white;
+}
+
+/*=============== HEADER & NAV===============*/
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+}
+/* .nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo{
+  color: white;
+  font-weight: 500;
+  transition: .4s;
+}
+.nav-logo:hover{
+  color: aqua;
+}
+
+.nav-menu{
+  position: fixed;
+  bottom: 1rem;
+  background-color: #494c58;
+  width: 90%;
+  border-radius: 4rem;
+  padding: 1rem 2.25rem;
+  backdrop-filter: blur(10px);
+}
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link{
+  color: white;
+  font-size: 1.25rem;
+  padding: .4rem;
+  display: flex;
+  border-radius: 5rem;
+} */
+/* Change background header */
+
+
+/*=============== HOME ===============*/
+.home-container{
+  position: relative;
+  row-gap: 4.5rem;
+  padding-top: 2rem;
+}
+.home-data{
+  text-align: center;
+}
+.home-greeting,
+.home-edu{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.home-greeting{
+  display: block;
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.home-edu{
+  color: white;
+  margin-bottom: 2.5rem;
+}
+.home-name{
+  font-size: var(--biggest-font-size);
+}
+
+.home-img{
+  width: 100%;
+}
+.home-handle{
+  justify-self: center;
+  width: 190px;
+  height: 260px;
+  background-color: #df9d63;
+  display: flex;
+  border-radius: 10rem 10rem 1rem 1rem;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem
+}
+
+.home-social{
+  position: absolute;
+  bottom: 5rem;
+  display: grid;
+  row-gap: .5rem;
+}
+
+.home-social-link{
+  width: max-content;
+  background-color: #494c58;
+  color: white;
+  padding: .25rem;
+  border-radius: .25rem;
+  display: flex;
+  font-size: 1rem;
+  transition: .4s;
+}
+.home-social-link:hover{
+  background-color: white;
+  color: #495e6d;
+}
+
+/*=============== BUTTONS ===============*/
+.button{
+  display: inline-block;
+  background-color: white;
+  color:#2f3e49;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
+.button:hover{
+  background-color: #2f3e49;
+  color: white;
+  border: 2px solid;
+}
+.button-ghost{
+  background-color: transparent;
+  border: 2px solid;
+  color:white;
+}
+.button-ghost:hover{
+  background-color: white;
+  color: #2f3e49;
+  border: 2px solid;
+}
+
+/*=============== ABOUT ===============*/
+.about-container{
+  row-gap: 2.5rem;
+}
+
+.about .card{
+  background-color: #494c58;
+  box-shadow: 2px 2px 2px 2px gray;
+  margin-bottom: 2rem;
+}
+
+
+
+/*=============== SKILLS ===============*/
+.skills-container{
+  row-gap: 2.5rem;
+  padding-top: 1rem;
+}
+.skills-content{
+  background-color: #494c58;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+}
+
+.skills-title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: white;
+  text-align: center;  
+  margin-bottom: 1.5rem;
+}
+
+.skills-box{
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills-group{
+  display: grid;
+  align-content: flex-start;
+  row-gap: 1rem;
+}
+
+.skills-data{
+  display: flex;
+  column-gap: .5rem;
+}
+
+.skills-icon{
+  width: 16px;
+  height: 16px;
+  color: #df9d63;
+}
+
+.skills-name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+.skills-level{
+  font-size: var(--tiny-font-size);
+}
+
+/*   */
+
+/*=============== SERVICES ===============*/
+
+
+/* Services modal */
+
+
+/*Active modal*/
+
+
+/*=============== WORK ===============*/
+.work-container{
+  padding-top: 1rem;
+}
+
+.work-filters{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  column-gap: 75rem;
+  margin-bottom: 2rem;
+}
+
+.work-item{
+  cursor: pointer;
+  color: #494c58;
+  padding: .25rem .75rem;
+  font-weight: var(--font-medium);
+  border-radius: .5rem;
+  background-color: #df9d63;
+}
+.work-item-active{
+  border: 0px;
+  color: #df9d63;
+  background-color: #494c58;
+}
+
+.work-card{
+  background-color: #494c58;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.bahasa{
+  font-size: var(--smaller-font-size);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.bahasa-item{
+  color: #494c58;
+  background-color: #df9d63;
+  width: max-content;
+  padding: .25rem .75rem;
+  border-radius: .5rem;
+  
+}
+
+.work-img{
+  border-radius: 1rem;
+  margin-bottom: .75rem;
+}
+
+.work-title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: .25rem;
+}
+
+.work-button{
+  width: max-content;
+  color: #df9d63;
+  font-size: var(--small-font-size);
+  display: flex;
+  column-gap: .25rem;
+  align-items: center;
+}
+
+.work-button:hover .work-icon{
+  transform: translateX(.25rem);
+}
+.work-icon{
+  width: 16px;
+  height: 16px;
+  transition: .4s;
+}
+/* Active item work*/
+
+
+/*=============== TESTIMONIAL ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== CONTACT ===============*/
+.contact-container{
+  row-gap: 3rem;
+  padding-bottom: 6rem;
+}
+.contact-title{
+  text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+.contact-info{
+  display: grid;
+  gap: 1rem;
+}
+.contact-card{
+  background: #494c58;
+  padding: 1rem;
+  border: .75rem;
+  text-align: center;
+}
+.contact-card-icon{
+  height: 1rem;
+  width: 1rem;
+}
+.contact-card-title, .contact-card-data{
+  font-size: var(--small-font-size);
+}
+
+.contact-card-title{
+  font-weight: var(--font-medium);
+}
+
+.contact-card-data{
+  display: block;
+  margin-bottom: .75rem;
+}
+
+.contact-button{
+  color: #df9d63;
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: .25rem;
+}
+.contact-button:hover .contact-button-icon{
+  transform: rotateX(.25rem);
+}
+.contact-button-icon{
+  width: 1rem;
+  height: 1rem;
+  transition: .4s;
+}
+.contact-form-div{
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+.contact-form-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  outline: none;
+  padding: 1.5rem;
+  border-radius: .75rem;
+  z-index: 1;
+}
+.contact-form-tag{
+  position:absolute;
+  top: -.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: .25rem;
+  background-color: #2f3e49;
+  z-index: 10;
+}
+.contact-form-area{
+  height: 11rem;
+}
+.contact-form-area textarea{
+  resize: none;
+}
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
